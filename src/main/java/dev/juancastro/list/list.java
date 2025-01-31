@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class list {
 
-  
+    List<String> weekDays = new ArrayList<>();
+
 
 }
