@@ -8,17 +8,19 @@ import static org.hamcrest.Matchers.*;
 import java.util.List;
 import java.util.ArrayList;
 
-public class listTest {
+public class WeekDayHandleTest {
 
     @Test
     @DisplayName ("comprueba si se crea una lista con los 7 dias de la semana")
     void testIfcreateDaysList_ReturnTrue() {
         //given
-        list emptyList = new list();
+        WeekDayHandle weekDaysHandle = new WeekDayHandle();
         //when
-        List<String> weekDays = emptyList.createList();
+        weekDaysHandle.createList();
+        List<String> weekDays = weekDaysHandle.getDays();
         //then
-        assertThat(emptyList,instanceOf(list.class));
+
+        assertThat(weekDaysHandle,instanceOf(WeekDayHandle.class));
         assertThat(weekDays, contains("monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"));
         assertThat(weekDays, hasSize(7));
     }
