@@ -26,7 +26,16 @@ public class WeekDayHandle {
     }
 
     public void deleteDay(String day) {
-        weekDays.remove(day);
+        if (weekDays.contains(day)) {
+            
+            weekDays.remove(day);
+        }
+    }
+
+    public String getSpecificDay(String day) {
+        if (weekDays.contains(day)) {
+            return day;
+        } return("el dia no existe");
     }
 
 }

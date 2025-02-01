@@ -6,7 +6,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 import java.util.List;
-import java.util.ArrayList;
 
 public class WeekDayHandleTest {
 
@@ -31,6 +30,7 @@ public class WeekDayHandleTest {
 
         WeekDayHandle weekDaysHandle = new WeekDayHandle();
         List<String> weekDays = weekDaysHandle.getDays();
+        weekDaysHandle.createList();
 
 
  
@@ -45,7 +45,8 @@ public class WeekDayHandleTest {
     void testIfDeleteDay_ReturnTrue() {
 
         WeekDayHandle weekDaysHandle = new WeekDayHandle();
-        String day = "martes";
+        String day = "Tuesday";
+        weekDaysHandle.createList();
 
         weekDaysHandle.deleteDay(day);
         List<String> weekDays = weekDaysHandle.getDays();
@@ -62,7 +63,9 @@ public class WeekDayHandleTest {
     void testIfGetSpecificDay_ReturnASpecificDay() {
 
         WeekDayHandle weekDaysHandle = new WeekDayHandle();
-        String day = "martes";
+        String day = "Tuesday";
+        weekDaysHandle.createList();
+
 
         String specificDay = weekDaysHandle.getSpecificDay(day);
         
