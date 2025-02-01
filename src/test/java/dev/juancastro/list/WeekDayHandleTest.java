@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+import java.util.Collections;
 import java.util.List;
 
 public class WeekDayHandleTest {
@@ -86,6 +87,22 @@ public class WeekDayHandleTest {
 
 
     }
+
+    @Test
+    @DisplayName("comprueba si la lista se ordena alfabeticamente")
+    void testIfDayListSort_returnListSorted() {
+
+        WeekDayHandle weekDaysHandle = new WeekDayHandle();
+        weekDaysHandle.createList();
+
+        List<String> sortWeekDays = weekDaysHandle.dayListSort();
+        List<String> manuallySortedList = weekDaysHandle.getDays();
+        Collections.sort(manuallySortedList);
+
+        assertThat(sortWeekDays, is(manuallySortedList));
+    }
+
+    
 
     
 
