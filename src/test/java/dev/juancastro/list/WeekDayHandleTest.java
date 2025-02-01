@@ -73,6 +73,22 @@ public class WeekDayHandleTest {
         
     }
 
+    @Test
+    @DisplayName("Comprueba si el dia ingresado existe en la lista")
+    void testIfDayExists_ReturnTrue() {
+        WeekDayHandle weekDaysHandle = new WeekDayHandle();
+        String day = "Tuesday";
+        weekDaysHandle.createList();
+
+        Boolean exists = weekDaysHandle.dayExists();
+
+        assertThat(exists, is(false));
+
+
+    }
+
+    
+
     
 
     
