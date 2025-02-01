@@ -38,6 +38,17 @@ public class WeekDayHandle {
         } return("el dia no existe");
     }
 
-    
+    public boolean dayExists(String day) {
+
+        if (weekDays.contains(day)){
+            return(true);
+
+        } else { 
+            System.out.println("el dia no existe");
+            return(false); 
+        }
+        
+
+    }
 
 }

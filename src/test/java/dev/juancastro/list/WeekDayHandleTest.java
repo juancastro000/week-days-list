@@ -80,9 +80,9 @@ public class WeekDayHandleTest {
         String day = "Tuesday";
         weekDaysHandle.createList();
 
-        Boolean exists = weekDaysHandle.dayExists();
+        Boolean exists = weekDaysHandle.dayExists(day);
 
-        assertThat(exists, is(false));
+        assertThat(exists, is(true));
 
 
     }
