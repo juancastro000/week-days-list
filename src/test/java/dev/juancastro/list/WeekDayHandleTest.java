@@ -21,7 +21,7 @@ public class WeekDayHandleTest {
         //then
 
         assertThat(weekDaysHandle,instanceOf(WeekDayHandle.class));
-        assertThat(weekDays, contains("monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"));
+        assertThat(weekDays, contains("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"));
         assertThat(weekDays, hasSize(7));
     }
 

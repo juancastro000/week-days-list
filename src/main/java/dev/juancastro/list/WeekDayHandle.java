@@ -15,6 +15,8 @@ public class WeekDayHandle {
         weekDays.addAll(List.of("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
     }
 
-    public List<String>
+    public List<String> getDays() {
+        return weekDays;
+    }
 
 }
