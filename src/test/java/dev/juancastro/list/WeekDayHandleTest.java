@@ -25,6 +25,23 @@ public class WeekDayHandleTest {
         assertThat(weekDays, hasSize(7));
     }
 
+    @Test
+    @DisplayName("comprueba si se retorna el largo de la lista")
+    void testIfGetSizeList_ReturnListSize() {
+
+        WeekDayHandle weekDaysHandle = new WeekDayHandle();
+        List<String> weekDays = weekDaysHandle.getDays();
+
+
+        assertThat(weekDaysHandle,instanceOf(WeekDayHandle.class));
+        int sizeList = weekDaysHandle.getSizeList();
+
+        assertThat(sizeList, is(weekDays.size()));
+
+    }
+
+    
+
     
 
 
