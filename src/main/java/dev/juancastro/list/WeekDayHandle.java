@@ -19,4 +19,10 @@ public class WeekDayHandle {
         return weekDays;
     }
 
+    public int getSizeList() {
+
+        return(weekDays.size());
+
+    }
+
 }
