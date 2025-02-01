@@ -33,12 +33,30 @@ public class WeekDayHandleTest {
         List<String> weekDays = weekDaysHandle.getDays();
 
 
-        assertThat(weekDaysHandle,instanceOf(WeekDayHandle.class));
+ 
         int sizeList = weekDaysHandle.getSizeList();
 
         assertThat(sizeList, is(weekDays.size()));
 
     }
+
+    @Test
+    @DisplayName("comprueba si se elimina el dia introducido de la lista")
+    void testIfDeleteDay_ReturnTrue() {
+
+        WeekDayHandle weekDaysHandle = new WeekDayHandle();
+        List<String> weekDays = weekDaysHandle.getDays();
+        String delete = "martes";
+
+        weekDays.deleteDay();
+
+        assertThat(weekDays,not(hasItem(delete)) );
+
+
+
+    }
+
+    
 
     
 
