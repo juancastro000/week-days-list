@@ -57,6 +57,19 @@ public class WeekDayHandleTest {
 
     }
 
+    @Test
+    @DisplayName("comprueba si se retorna el dia solicitado")
+    void testIfGetSpecificDay_ReturnASpecificDay() {
+
+        WeekDayHandle weekDaysHandle = new WeekDayHandle();
+        String day = "martes";
+
+        String specificDay = weekDaysHandle.getSpecificDay(day);
+        
+        assertThat(specificDay, is(day));
+        
+    }
+
     
 
     
