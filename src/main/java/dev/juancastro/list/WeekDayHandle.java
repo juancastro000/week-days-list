@@ -25,4 +25,8 @@ public class WeekDayHandle {
 
     }
 
+    public void deleteDay(String day) {
+        weekDays.remove(day);
+    }
+
 }

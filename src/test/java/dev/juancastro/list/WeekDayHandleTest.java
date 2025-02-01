@@ -45,12 +45,13 @@ public class WeekDayHandleTest {
     void testIfDeleteDay_ReturnTrue() {
 
         WeekDayHandle weekDaysHandle = new WeekDayHandle();
+        String day = "martes";
+
+        weekDaysHandle.deleteDay(day);
         List<String> weekDays = weekDaysHandle.getDays();
-        String delete = "martes";
+    
 
-        weekDays.deleteDay();
-
-        assertThat(weekDays,not(hasItem(delete)) );
+        assertThat(weekDays,not(hasItem(day)) );
 
 
 
