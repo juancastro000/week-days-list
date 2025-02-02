@@ -5,7 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class WeekDayHandleTest {
@@ -95,11 +97,13 @@ public class WeekDayHandleTest {
         WeekDayHandle weekDaysHandle = new WeekDayHandle();
         weekDaysHandle.createList();
 
-        List<String> sortWeekDays = weekDaysHandle.dayListSort();
-        List<String> manuallySortedList = weekDaysHandle.getDays();
-        Collections.sort(manuallySortedList);
+        weekDaysHandle.dayListSort();
 
-        assertThat(sortWeekDays, is(manuallySortedList));
+
+        List<String> sortedList = weekDaysHandle.getDays();
+        List<String> manuallySortedList = new ArrayList<>(sortedList);
+        Collections.sort(manuallySortedList);
+        assertThat(sortedList, is(manuallySortedList));
     }
 
     

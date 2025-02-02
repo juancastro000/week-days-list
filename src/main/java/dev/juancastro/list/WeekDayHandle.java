@@ -2,6 +2,7 @@ package dev.juancastro.list;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class WeekDayHandle {
 
@@ -50,5 +51,10 @@ public class WeekDayHandle {
         
 
     }
+
+    public void dayListSort() {
+        Collections.sort(weekDays);
+    }
+    
 
 }
