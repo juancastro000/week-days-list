@@ -7,7 +7,6 @@ import static org.hamcrest.Matchers.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class WeekDayHandleTest {
@@ -103,8 +102,24 @@ public class WeekDayHandleTest {
         List<String> sortedList = weekDaysHandle.getDays();
         List<String> manuallySortedList = new ArrayList<>(sortedList);
         Collections.sort(manuallySortedList);
-        assertThat(sortedList, is(manuallySortedList));
+        assertThat(sortedList, equalTo(manuallySortedList));
     }
+
+    @Test
+    @DisplayName("comprueba que la lista se vacie")
+    void testIfEmptyList_returnAEmptyList() {
+
+        WeekDayHandle weekDaysHandle = new WeekDayHandle();
+        weekDaysHandle.createList();
+        
+        weekDaysHandle.emptyList();
+        List<String> listEmpty = weekDaysHandle.getDays();
+
+        assertThat(listEmpty, is(empty()));
+
+    }
+
+    
 
     
 
